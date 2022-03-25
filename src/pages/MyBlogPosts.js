@@ -8,7 +8,7 @@ import LoggedInNavBar from '../components/LoggedInNavBar.js';
 
 //Pages Import
 import Blogs from './Blogs';
-
+import { BASE_URL } from '../BaseUrl';
 // GRID
 import BlogCards from '../components/BlogCards.js';
 
@@ -35,7 +35,7 @@ export default function MyBlogPosts () {
 
     useEffect(() => {
         if(!currentUser) return
-        fetch(`http://localhost:8080/posts`)
+        fetch(`${BASE_URL}/posts`)
         .then(response => response.json())
         .then((data) => setPostsArray(data.filter((post) => post.user_id === currentUser.id)))
         .catch((err) => console.error(err))

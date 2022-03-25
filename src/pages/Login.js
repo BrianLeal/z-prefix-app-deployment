@@ -9,7 +9,7 @@ import { SiteContext } from '../context/SiteData'
 //PAGE IMPORTS
 import Register from './Register.js';
 import Blogs from './Blogs.js';
-
+import { BASE_URL } from '../BaseUrl';
 //Component Imports
 import NavBar from '../components/NavBar';
 
@@ -29,7 +29,7 @@ export default function Login () {
         // console.log('password', password)
      
         
-        fetch(`http://localhost:8080/login`, {
+        fetch(`${BASE_URL}/login`, {
              headers : { 
                  'Content-Type': 'application/json',
                  'Accept': 'application/json'

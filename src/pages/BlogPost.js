@@ -9,6 +9,7 @@ import LoggedInNavBar from '../components/LoggedInNavBar.js';
 
 //Pages Import
 import MyBlogPosts from './MyBlogPosts';
+import { BASE_URL } from '../BaseUrl';
 
 export default function BlogPost () {
 
@@ -24,7 +25,7 @@ export default function BlogPost () {
             console.log('checking handlesubmit', title, content)
 
             e.preventDefault();
-              fetch('http://localhost:8080/posts', {
+              fetch(`${BASE_URL}/posts`, {
                 headers : { 
                   'Content-Type': 'application/json',
                   'Accept': 'application/json'

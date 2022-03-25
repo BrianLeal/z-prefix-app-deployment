@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 //Page Imports
 import Login from './Login.js';
+import { BASE_URL } from '../BaseUrl';
 
 //Component Imports
 import NavBar from '../components/NavBar';
@@ -26,7 +27,7 @@ export default function Register (){
 
         
         e.preventDefault();
-          fetch('http://localhost:8080/users', {
+          fetch(`${BASE_URL}/users`, {
             headers : { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'
