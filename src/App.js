@@ -16,8 +16,6 @@ import Blogs from './pages/Blogs.js';
 import Footer from './components/Footer.js';
 
 
-
-
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const value = {currentUser, setCurrentUser}

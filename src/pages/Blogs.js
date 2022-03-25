@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import LoggedInNavBar from '../components/LoggedInNavBar';
 import NavBar from '../components/NavBar';
 import { SiteContext } from '../context/SiteData.js';
+import { BASE_URL } from '../BaseUrl';
 
 
 // GRID
@@ -27,7 +28,7 @@ export default function Blogs () {
     // console.log('postsArray', postsArray);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/posts`)
+        fetch(`${BASE_URL}/posts`)
         .then(response => response.json())
         .then((data) => setPostsArray(data))
         .catch((err) => console.error(err))
